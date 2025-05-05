@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PDF Tools - Gabung & Pecah PDF</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>PDF Tools</h1>
+    <h2>Gabung PDF</h2>
+    <form action="/merge" method="post" enctype="multipart/form-data">
+        <input type="file" name="pdfs" multiple required>
+        <button type="submit">Gabungkan</button>
+    </form>
+
+    <h2>Pisah PDF</h2>
+    <form action="/split" method="post" enctype="multipart/form-data">
+        <input type="file" name="split_pdf" required>
+        <button type="submit">Pisahkan</button>
+    </form>
+
+    <!-- Di sini kamu bisa tempel kode AdSense -->
+    <!-- <script>IKLAN ADSENSE DI SINI</script> -->
+</body>
+</html>
